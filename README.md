@@ -1,4 +1,5 @@
-# ViX
+# ViX     
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/vision-xformers-efficient-attention-for-image/image-classification-on-cifar-10)](https://paperswithcode.com/sota/image-classification-on-cifar-10?p=vision-xformers-efficient-attention-for-image)
 ## Vision Xformers: Efficient Attention for Image Classification
 
 We use Linear Attention mechanisms to replace quadratic attention in ViT for image classification. 
