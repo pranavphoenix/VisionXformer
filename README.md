@@ -30,8 +30,10 @@ The code for using all for these models for classification of CIFAR 10 dataset i
 
 We have adapted the codes for ViT and linear transformers from @lucidrains 
 
-If you wish to cite this paper please use:
+More information about these models can be obtained from our paper : https://arxiv.org/abs/2107.02239
 
+If you wish to cite this paper please use:
+```
 @misc{jeevan2021vision,
       title={Vision Xformers: Efficient Attention for Image Classification}, 
       author={Pranav Jeevan and Amit Sethi},
@@ -40,3 +42,4 @@ If you wish to cite this paper please use:
       archivePrefix={arXiv},
       primaryClass={cs.CV}
 }
+```
