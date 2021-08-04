@@ -2,7 +2,7 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/vision-xformers-efficient-attention-for-image/image-classification-on-cifar-10)](https://paperswithcode.com/sota/image-classification-on-cifar-10?p=vision-xformers-efficient-attention-for-image)
 ## Vision Xformers: Efficient Attention for Image Classification
 
-We use Linear Attention mechanisms to replace quadratic attention in ViT for image classification. 
+We use Linear Attention mechanisms to replace quadratic attention in ViT for image classification. We show that models using linear attention and CNN embedding layers need less parameters and low GPU requirements for achieving good accuracy. These improvements can be used to democratize the use of transformers by practitioners who are limited by data and GPU.
 
 Hybrid ViX uses convolutional layers instead of linear layer for generating embeddings
 
