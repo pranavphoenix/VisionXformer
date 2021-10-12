@@ -16,7 +16,7 @@ Eg. When we use Performer in ViX, we replace the X with P, calling it ViP (Visio
 
 We have added RoPE in the title of models which used Rotary Postion Embedding
 
-The code for using all for these models for classification of CIFAR 10 dataset is provided
+The code for using all for these models for classification of CIFAR 10/Tiny ImageNet dataset is provided
 
 ### Models
 
@@ -29,6 +29,7 @@ The code for using all for these models for classification of CIFAR 10 dataset i
 - Hybrid Vision Performer (ViP)
 - Hybrid Vision Nyströmformer (ViN)
 - LeViN (Replacing Transformer in LeViT with Nyströmformer)
+- LeViP (Replacing Transformer in LeViT with Performer)
 
 We have adapted the codes for ViT and linear transformers from @lucidrains 
 
