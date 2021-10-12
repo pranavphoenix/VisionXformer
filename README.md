@@ -30,6 +30,10 @@ The code for using all for these models for classification of CIFAR 10/Tiny Imag
 - Hybrid Vision Nyströmformer (ViN)
 - LeViN (Replacing Transformer in LeViT with Nyströmformer)
 - LeViP (Replacing Transformer in LeViT with Performer)
+- CvN (Replacing Transformer in CvT with Nyströmformer)
+- CvP (Replacing Transformer in CvT with Performer)
+- CCN (Replacing Transformer in CCT with Nyströmformer)
+- CCP(Replacing Transformer in CCT with Performer)
 
 We have adapted the codes for ViT and linear transformers from @lucidrains 
 
