@@ -28,6 +28,7 @@ The code for using all for these models for classification of CIFAR 10 dataset i
 - Hybrid Vision Linformer (ViL)
 - Hybrid Vision Performer (ViP)
 - Hybrid Vision Nyströmformer (ViN)
+- LeViN (Replacing Transformer in LeViT with Nyströmformer)
 
 We have adapted the codes for ViT and linear transformers from @lucidrains 
 
