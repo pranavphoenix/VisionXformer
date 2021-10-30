@@ -155,7 +155,7 @@ class Transformer(nn.Module):
             x = ff(x) + x
         return x
 
-class ViT(nn.Module):
+class HybridViT(nn.Module):
     def __init__(self, *, image_size, patch_size, num_classes, dim, depth, heads, mlp_dim, pool = 'cls', channels = 3, dim_head = 64, dropout = 0., emb_dropout = 0.):
         super().__init__()
         image_height, image_width = pair(image_size)
@@ -204,7 +204,7 @@ class ViT(nn.Module):
         x = self.to_latent(x)
         return self.mlp_head(x)
 
-model = ViT(
+model = HybridViT(
     image_size = 32,
     patch_size = 1,
     num_classes = 10,             # number of stages
@@ -276,7 +276,7 @@ for epoch in range(40):  # loop over the dataset multiple times
     top1.append(correct_1/c)
     top5.append(correct_5/c)
     if float(correct_1/c) >= float(max(top1)):
-        PATH = 'ViT.pth'
+        PATH = 'HybridViT.pth'
         torch.save(model.state_dict(), PATH)
         print(1)
 print('Finished Training')
