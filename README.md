@@ -24,10 +24,12 @@ The code for using all for these models for classification of CIFAR 10/Tiny Imag
 - Vision Linformer (ViL)
 - Vision Performer (ViP)
 - Vision Nyströmformer (ViN)
+- FNet
 - Hybrid Vision Transformer (HybridViT)
 - Hybrid Vision Linformer (HybridViL)
 - Hybrid Vision Performer (HybridViP)
 - Hybrid Vision Nyströmformer (HybridViN)
+- Hybrid FNet
 - LeViN (Replacing Transformer in LeViT with Nyströmformer)
 - LeViP (Replacing Transformer in LeViT with Performer)
 - CvN (Replacing Transformer in CvT with Nyströmformer)
