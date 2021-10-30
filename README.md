@@ -12,7 +12,7 @@ Nomenclature:
 We replace the X in ViX with the starting alphabet of the attention mechanism used
 Eg. When we use Performer in ViX, we replace the X with P, calling it ViP (Vision Performer)
 
-'Hybrid' prefix is used in models which uses convolutional layers instead of linear embeddding layer. We have added CNN in the title for hybrid models
+'Hybrid' prefix is used in models which uses convolutional layers instead of linear embeddding layer. 
 
 We have added RoPE in the title of models which used Rotary Postion Embedding
 
@@ -24,10 +24,10 @@ The code for using all for these models for classification of CIFAR 10/Tiny Imag
 - Vision Linformer (ViL)
 - Vision Performer (ViP)
 - Vision Nyströmformer (ViN)
-- Hybrid Vision Transformer (ViT)
-- Hybrid Vision Linformer (ViL)
-- Hybrid Vision Performer (ViP)
-- Hybrid Vision Nyströmformer (ViN)
+- Hybrid Vision Transformer (HybridViT)
+- Hybrid Vision Linformer (HybridViL)
+- Hybrid Vision Performer (HybridViP)
+- Hybrid Vision Nyströmformer (HybridViN)
 - LeViN (Replacing Transformer in LeViT with Nyströmformer)
 - LeViP (Replacing Transformer in LeViT with Performer)
 - CvN (Replacing Transformer in CvT with Nyströmformer)
