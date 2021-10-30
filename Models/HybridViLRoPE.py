@@ -33,7 +33,6 @@ from torch import nn, einsum
 from einops import rearrange, repeat
 from einops.layers.torch import Rearrange
 from linformer.reversible import ReversibleSequence, SequentialSequence
-
 # helpers
 from einops import reduce
 
@@ -188,12 +187,7 @@ class LinformerSelfAttention(nn.Module):
         out = out.transpose(1, 2).reshape(b, n, -1)
         return self.to_out(out)
 
-import torch
-from torch import nn, einsum
-import torch.nn.functional as F
 
-from einops import rearrange, repeat
-from einops.layers.torch import Rearrange
 
 # helpers
 
