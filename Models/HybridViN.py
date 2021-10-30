@@ -244,7 +244,7 @@ class Transformer(nn.Module):
             x = ff(x) + x
         return x
 
-class ViN(nn.Module):
+class HybridViN(nn.Module):
     def __init__(self, *, image_size, patch_size, num_classes, dim, depth, heads, mlp_dim, pool = 'cls', channels = 3, dim_head = 64, dropout = 0., emb_dropout = 0.):
         super().__init__()
         image_height, image_width = pair(image_size)
@@ -257,8 +257,10 @@ class ViN(nn.Module):
         assert pool in {'cls', 'mean'}, 'pool type must be either cls (cls token) or mean (mean pooling)'
 
         self.to_patch_embedding = nn.Sequential(
-            Rearrange('b c (h p1) (w p2) -> b (h w) (p1 p2 c)', p1 = patch_height, p2 = patch_width),
-            nn.Linear(patch_dim, dim)
+            nn.Conv2d(3, 32, 3, stride = 1, padding = 1),
+            nn.Conv2d(32, 64, 3, stride = 1, padding = 1),
+            nn.Conv2d(64, dim, 3, stride = 1, padding = 1),
+            Rearrange('b c (h p1) (w p2) -> b (h w) (p1 p2 c)', p1 = patch_height, p2 = patch_width)
         )
 
         self.pos_embedding = nn.Parameter(torch.randn(1, num_patches + 1, dim))
@@ -291,7 +293,7 @@ class ViN(nn.Module):
         x = self.to_latent(x)
         return self.mlp_head(x)
 
-model = ViN(
+model = HybridViN(
     image_size = 32,
     patch_size = 1,
     num_classes = 10,             # number of stages
@@ -363,7 +365,7 @@ for epoch in range(40):  # loop over the dataset multiple times
     top1.append(correct_1/c)
     top5.append(correct_5/c)
     if float(correct_1/c) >= float(max(top1)):
-        PATH = 'ViN.pth'
+        PATH = 'HybridViN.pth'
         torch.save(model.state_dict(), PATH)
         print(1)
 print('Finished Training')
