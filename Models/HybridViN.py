@@ -233,7 +233,7 @@ class Transformer(nn.Module):
         eps = 1e-8
         for _ in range(depth):
             self.layers.append(nn.ModuleList([
-                PreNorm(dim, NystromAttention(dim, dim_head = dim_head, num_landmarks =num_landmarks, pinv_iterations =pinv_iterations, residual = residual, residual_conv_kernel = residual_conv_kernel, eps = eps)),
+                PreNorm(dim, NystromAttention(dim, dim_head = dim_head, heads = heads, num_landmarks =num_landmarks, pinv_iterations =pinv_iterations, residual = residual, residual_conv_kernel = residual_conv_kernel, eps = eps)),
                 PreNorm(dim, FeedForward(dim, mlp_dim, dropout = dropout))
             ]))
     def forward(self, x):
