@@ -317,7 +317,7 @@ for epoch in range(40):  # loop over the dataset multiple times
     epoch_accuracy = 0
     epoch_loss = 0
     running_loss = 0.0
-
+    model.train()
     for i, data in enumerate(trainloader, 0):
         # get the inputs; data is a list of [inputs, labels]
         inputs, labels = data[0].to(device), data[1].to(device)
@@ -344,6 +344,7 @@ for epoch in range(40):  # loop over the dataset multiple times
     correct_1=0
     correct_5=0
     c = 0
+    model.eval()
     with torch.no_grad():
         for data in testloader:
             images, labels = data[0].to(device), data[1].to(device)
