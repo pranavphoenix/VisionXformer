@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
   name = 'vision_xformer',
-  packages = find_packages(exclude=['examples']),
+  packages = find_packages(exclude=['models']),
   version = '0.2.0',
   license='MIT',
   description = 'Vision Xformers',
